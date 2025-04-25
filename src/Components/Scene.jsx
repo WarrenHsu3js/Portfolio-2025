@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react'
 import { useGLTF, useCursor } from '@react-three/drei'
 
 export function Scene({ onClick, ...props }) {
-  const { nodes, materials } = useGLTF('/models/scene.glb')
+  const { nodes, materials } = useGLTF('./models/scene.glb')
 
   const [hovered, setHovered] = useState(null)
   useCursor(!!hovered)
@@ -57,4 +57,4 @@ export function Scene({ onClick, ...props }) {
   )
 }
 
-useGLTF.preload('/models/scene.glb')
+useGLTF.preload('./models/scene.glb')

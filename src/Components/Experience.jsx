@@ -6,8 +6,8 @@ import Ecctrl, { EcctrlAnimation } from "ecctrl";
 import { Scene } from "./Scene";
 import { Shelf } from "../Furniture/Shelf";
 import Camera from "./Camera";
-import { Boat } from "../models/Boat";
-import { WoodenTruss } from "../models/WoodenTruss";
+import { Boat } from "../Objects/Boat";
+import { WoodenTruss } from "../Objects/WoodenTruss";
 
 export const Experience = ({ setSelected, selected }) => {
   const ecctrlRef = useRef();
@@ -92,7 +92,7 @@ export const Experience = ({ setSelected, selected }) => {
               autoBalanceDampingOnY={0.01}
             >
               <EcctrlAnimation
-                characterURL={"/models/character.glb"}
+                characterURL={"./models/character.glb"}
                 animationSet={animationSet}
               >
                 <CharacterModel />

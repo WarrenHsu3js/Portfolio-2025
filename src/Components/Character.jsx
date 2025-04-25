@@ -4,7 +4,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export function CharacterModel(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/models/character.glb')
+  const { nodes, materials } = useGLTF('./models/character.glb')
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -23,4 +23,4 @@ export function CharacterModel(props) {
   )
 }
 
-useGLTF.preload('/models/character.glb')
+useGLTF.preload('./models/character.glb')
