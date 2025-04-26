@@ -9,6 +9,7 @@ import Connects from './Contents/Connects'
 import NavBar from './Contents/NavBar'
 import InfoPanel from './Contents/InfoPanel'
 import { Leva } from 'leva'
+import { Html, useProgress } from '@react-three/drei'
 
 function Home() {
   const [selected, setSelected] = useState(null)
@@ -17,12 +18,21 @@ function Home() {
     <div className="pt-14 w-full h-screen">
       <Leva collapsed />
       <Canvas onPointerMissed={() => setSelected(null)}>
-        <Suspense>
+        <Suspense fallback={<Loader />} >
           <Experience setSelected={setSelected} selected={selected} />
         </Suspense>
       </Canvas>
       <InfoPanel selected={selected} onClose={() => setSelected(null)} />
     </div>
+  )
+}
+
+function Loader() {
+  const { progress } = useProgress()
+  return (
+    <Html center>
+      <div style={{ color: 'white' }}>{progress.toFixed(0)} % loaded</div>
+    </Html>
   )
 }
 
