@@ -14,6 +14,15 @@ import { Html, useProgress } from '@react-three/drei'
 function Home() {
   const [selected, setSelected] = useState(null)
 
+  function Loader() {
+    const { progress } = useProgress()
+    return (
+      <Html center>
+        <div style={{ color: 'white' }}>{progress.toFixed(0)} % loaded</div>
+      </Html>
+    )
+  }
+
   return (
     <div className="pt-14 w-full h-screen">
       <Leva collapsed />
@@ -27,14 +36,7 @@ function Home() {
   )
 }
 
-function Loader() {
-  const { progress } = useProgress()
-  return (
-    <Html center>
-      <div style={{ color: 'white' }}>{progress.toFixed(0)} % loaded</div>
-    </Html>
-  )
-}
+
 
 function App() {
   return (
