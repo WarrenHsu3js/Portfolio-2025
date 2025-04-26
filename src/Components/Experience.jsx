@@ -62,7 +62,7 @@ export const Experience = ({ setSelected, selected }) => {
       <ambientLight intensity={1.5} />
 
       <Shelf />
-      <WoodenTruss scale={1500} position={[5, 0, -65]} />
+      {/* <WoodenTruss scale={1500} position={[5, 0, -65]} />
       <Float
         speed={2}
         floatIntensity={2}
@@ -70,7 +70,7 @@ export const Experience = ({ setSelected, selected }) => {
         floatingRange={[-0.2, 0.2]}
       >
         <Boat  scale={0.5} position={[20, 5, -30]} rotation-y={Math.PI*0.5} />
-      </Float>
+      </Float> */}
       <Physics>
         <KeyboardControls map={keyboardMap}>
           <RigidBody type="fixed" colliders="trimesh">
