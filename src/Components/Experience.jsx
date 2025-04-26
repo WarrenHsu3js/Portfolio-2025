@@ -62,8 +62,8 @@ export const Experience = ({ setSelected, selected }) => {
       <ambientLight intensity={1.5} />
 
       <Shelf />
-      {/* <WoodenTruss scale={1500} position={[5, 0, -65]} />
-      <Float
+      <WoodenTruss scale={1500} position={[5, 0, -65]} />
+      {/* <Float
         speed={2}
         floatIntensity={2}
         rotationIntensity={0.5}
