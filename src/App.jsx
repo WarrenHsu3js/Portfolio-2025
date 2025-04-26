@@ -62,7 +62,7 @@ function Home() {
 
 function App() {
   return (
-    <Router basename="/Portfolio-2025">
+    <Router>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
