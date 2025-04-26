@@ -1,6 +1,8 @@
 import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Html, useProgress } from '@react-three/drei'
+import { Leva } from 'leva'
 import './App.css'
 
 import { Experience } from './Components/Experience'
@@ -8,26 +10,24 @@ import About from './Contents/About'
 import Connects from './Contents/Connects'
 import NavBar from './Contents/NavBar'
 import InfoPanel from './Contents/InfoPanel'
-import { Leva } from 'leva'
-import { Html, useProgress } from '@react-three/drei'
+
+function Loader() {
+  const { progress } = useProgress()
+  return (
+    <Html center>
+      <div style={{ color: 'white' }}>{progress.toFixed(0)} % loaded</div>
+    </Html>
+  )
+}
 
 function Home() {
   const [selected, setSelected] = useState(null)
-
-  function Loader() {
-    const { progress } = useProgress()
-    return (
-      <Html center>
-        <div style={{ color: 'white' }}>{progress.toFixed(0)} % loaded</div>
-      </Html>
-    )
-  }
 
   return (
     <div className="pt-14 w-full h-screen">
       <Leva collapsed />
       <Canvas onPointerMissed={() => setSelected(null)}>
-        <Suspense fallback={<Loader />} >
+        <Suspense fallback={<Loader />}>
           <Experience setSelected={setSelected} selected={selected} />
         </Suspense>
       </Canvas>
