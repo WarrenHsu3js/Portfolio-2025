@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Html, useProgress } from '@react-three/drei'
@@ -13,12 +13,36 @@ import InfoPanel from './Contents/InfoPanel'
 
 function Loader() {
   const { progress } = useProgress()
+  const [displayedProgress, setDisplayedProgress] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDisplayedProgress((prev) => {
+        if (prev < progress) {
+          return Math.min(prev + 1, progress)
+        }
+        return prev
+      })
+    }, 20)
+    return () => clearInterval(interval)
+  }, [progress])
+
   return (
     <Html center>
-      <div style={{ color: 'white' }}>{progress.toFixed(0)} % loaded</div>
+      <div style={{
+        color: 'white',
+        fontSize: '24px',
+        fontFamily: 'sans-serif',
+        background: 'rgba(0, 0, 0, 0.6)',
+        padding: '20px 40px',
+        borderRadius: '12px'
+      }}>
+        {displayedProgress.toFixed(0)} % loaded
+      </div>
     </Html>
   )
 }
+
 
 function Home() {
   const [selected, setSelected] = useState(null)
