@@ -6,7 +6,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function WoodenTruss(props) {
-  const { nodes, materials } = useGLTF('./models/WoodenTruss.glb')
+  const { nodes, materials } = useGLTF('/models/WoodenTruss.glb')
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -1903,4 +1903,4 @@ export function WoodenTruss(props) {
   )
 }
 
-useGLTF.preload('./models/WoodenTruss.glb')
+useGLTF.preload('/models/WoodenTruss.glb')
