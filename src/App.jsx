@@ -36,8 +36,6 @@ function Home() {
   )
 }
 
-
-
 function App() {
   return (
     <Router basename="/Portfolio-2025">
