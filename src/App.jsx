@@ -10,6 +10,7 @@ import About from './Contents/About'
 import Connects from './Contents/Connects'
 import NavBar from './Contents/NavBar'
 import InfoPanel from './Contents/InfoPanel'
+import { EcctrlJoystick } from 'ecctrl'
 
 function Loader() {
   const { progress } = useProgress()
@@ -50,6 +51,7 @@ function Home() {
   return (
     <div className="pt-14 w-full h-screen">
       <Leva collapsed />
+      <EcctrlJoystick />
       <Canvas onPointerMissed={() => setSelected(null)}>
         <Suspense fallback={<Loader />}>
           <Experience setSelected={setSelected} selected={selected} />
