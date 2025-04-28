@@ -50,8 +50,12 @@ function Home() {
 
   return (
     <div className="pt-14 w-full h-screen">
+      <EcctrlJoystick
+        joystickBaseProps={{
+          receiveShadow: true,
+        }}
+      />
       <Leva collapsed />
-      <EcctrlJoystick />
       <Canvas onPointerMissed={() => setSelected(null)}>
         <Suspense fallback={<Loader />}>
           <Experience setSelected={setSelected} selected={selected} />
