@@ -36,7 +36,7 @@ export default function InfoPanel({ selected, onClose }) {
       </div>
 
       {/* Articles */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {info.articles.map((article, index) => (
           <div key={index} className="bg-white border rounded-lg shadow-sm overflow-hidden">
             <img src={article.image} alt={article.title} className="w-full h-32 object-cover" />
