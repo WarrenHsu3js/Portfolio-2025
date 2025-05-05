@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from "react";
-import { Float, KeyboardControls } from "@react-three/drei";
+import { Float, Html, KeyboardControls } from "@react-three/drei";
 import { Physics, RigidBody } from "@react-three/rapier";
 import { CharacterModel } from "./Character";
 import Ecctrl, { EcctrlAnimation, useJoystickControls } from "ecctrl";
@@ -9,6 +9,7 @@ import Camera from "./Camera";
 import { Boat } from "../Objects/Boat";
 import { WoodenTruss } from "../Objects/WoodenTruss";
 import { useKeyboardControls } from "@react-three/drei";
+import TextMesh from "../Objects/Text";
 
 export const Experience = ({ setSelected, selected }) => {
   const ecctrlRef = useRef();
@@ -51,9 +52,13 @@ export const Experience = ({ setSelected, selected }) => {
 
       <directionalLight position={[-1, 2, -3]} intensity={4.5} castShadow />
       <ambientLight intensity={1.5} />
-
+      
+      <TextMesh />
+      
       <Shelf />
+      
       <WoodenTruss scale={1500} position={[5, 0, -65]} />
+      
       <Float
         speed={2}
         floatIntensity={2}
