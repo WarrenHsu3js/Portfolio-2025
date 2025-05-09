@@ -65,7 +65,11 @@ export default function Home() {
       <section className="text-center py-20 px-4 bg-gray-100">
         <h1 className="text-4xl font-bold mb-4">Hi, 我是 Warren</h1>
         <p className="text-lg max-w-xl mx-auto mb-6">
-          我專注於數位製造與 3D 設計，擅長從建模到加工的全流程整合，涵蓋產品設計、家具製造與展場裝置開發。
+        我是一位專注於數位製造與 3D 設計的創作者，擁有從建模到加工的完整實作經驗。
+        目前正轉型為互動網頁開發者，結合 Three.js 與 React Three Fiber 技術，打造沉浸式的線上展示體驗。
+        我的作品涵蓋產品設計、家具製造、展場裝置與互動導覽系統，並致力於將物理世界與虛擬空間整合，創造全新的數位敘事方式。
+        本網站展示了我的 3D 專案與實作經驗，歡迎瀏覽每一個細節，深入了解我的設計思維與技術整合能力。
+        👉 點擊下方按鈕，開始互動探索
         </p>
         <div className="flex justify-center gap-4">
           <Link
