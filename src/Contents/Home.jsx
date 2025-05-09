@@ -64,18 +64,20 @@ export default function Home() {
     <div className="min-h-screen bg-white text-gray-800">
       <section className="text-center py-20 px-4 bg-gray-100">
         <h1 className="text-4xl font-bold mb-6">Hi，我是 Warren</h1>
-        <div className="text-lg max-w-2xl mx-auto space-y-4">
+        <div className="text-lg max-w-4xl mx-auto space-y-4 leading-relaxed">
           <p>
             我是一位專注於數位製造與 3D 設計的創作者，擁有從建模到加工的完整實作經驗。
-            目前正轉型為互動網頁開發者，結合 <strong>Three.js</strong> 與 <strong>React Three Fiber</strong> 技術，打造沉浸式的線上展示體驗。
           </p>
           <p>
-            我的作品涵蓋產品設計、家具製造、展場裝置與互動導覽系統，並致力於將物理世界與虛擬空間整合，創造全新的數位敘事方式。
+          目前正轉型為互動網頁開發者，結合 <strong>Three.js</strong> 與 <strong>React Three Fiber</strong> 技術，打造沉浸式的線上展示體驗。
+          </p>
+          <p>
+            我的作品涵蓋產品設計、家具設計、建材加工，致力於將物理世界與虛擬空間整合，創造全新的數位敘事方式。
           </p>
           <p>
             本網站展示了我的 3D 專案與實作經驗，歡迎瀏覽每一個細節，深入了解我的設計思維與技術整合能力。
           </p>
-          <p>
+          <p className="font-medium">
             👉 點擊下方按鈕，開始互動探索
           </p>
         </div>
@@ -91,7 +93,7 @@ export default function Home() {
       </section>
 
       <section className="py-16 px-4 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-10 text-center">數位製造經歷作品</h2>
+        <h2 className="text-3xl font-semibold mb-10 text-center">數位製造經歷</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Link
