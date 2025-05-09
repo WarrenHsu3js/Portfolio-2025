@@ -11,7 +11,7 @@ export default function Connects() {
         <div className="space-y-4">
           <div>
             📧 <span className="font-medium">Email：</span>
-            <a href="mailto:grasshopperdeveloper2000@gmail.com" className="text-blue-600 hover:underline">grasshopperdeveloper2000@gmail.com</a>
+            <a href="mailto:hsuwarren3js@gmail.com" className="text-blue-600 hover:underline">hsuwarren3js@gmail.com</a>
           </div>
           <div>
             💼 <span className="font-medium">LinkedIn：</span>
