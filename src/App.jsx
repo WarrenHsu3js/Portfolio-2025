@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Html, useProgress } from '@react-three/drei';
 import { Leva } from 'leva';
 import './App.css';
