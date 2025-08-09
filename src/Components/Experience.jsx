@@ -4,12 +4,8 @@ import { Physics, RigidBody } from "@react-three/rapier";
 import { CharacterModel } from "./Character";
 import Ecctrl, { EcctrlAnimation, useJoystickControls } from "ecctrl";
 import { Scene } from "./Scene";
-import { Shelf } from "../Furniture/Shelf";
 import Camera from "./Camera";
-import { Boat } from "../Objects/Boat";
-import { WoodenTruss } from "../Objects/WoodenTruss";
 import { useKeyboardControls } from "@react-three/drei";
-import TextMesh from "../Objects/Text";
 
 export const Experience = ({ setSelected, selected }) => {
   const ecctrlRef = useRef();
@@ -52,21 +48,6 @@ export const Experience = ({ setSelected, selected }) => {
 
       <directionalLight position={[-1, 2, -3]} intensity={4.5} castShadow />
       <ambientLight intensity={1.5} />
-      
-      <TextMesh />
-      
-      <Shelf />
-      
-      <WoodenTruss scale={1500} position={[5, 0, -65]} />
-      
-      <Float
-        speed={2}
-        floatIntensity={2}
-        rotationIntensity={0.5}
-        floatingRange={[-0.2, 0.2]}
-      >
-        <Boat scale={0.5} position={[20, 5, -30]} rotation-y={Math.PI * 0.5} />
-      </Float>
 
       <Physics>
         <KeyboardControls map={keyboardMap}>
